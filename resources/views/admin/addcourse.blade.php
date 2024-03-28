@@ -1,0 +1,70 @@
+@extends('admin.layouts.template')
+@section('content')
+<div  class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Add Course</h4>
+        <form class="forms-sample" method="post" action="{{ route('added_course') }}" enctype="multipart/form-data">
+          @csrf
+          <div class=" d-flex justify-content-between">
+              <div style="width: 58%; padding:10px;" class="bg-secondary">
+              <div class="form-group" >
+            <label for="exampleInputName1">Title Name</label>
+            <input type="text" class="form-control" name="title" id="exampleInputName1" placeholder="Blog Title">
+          </div>
+          
+          <div class="form-group">
+            <label for="exampleTextarea1">Description</label>
+            <!--<textarea class="form-control" name="full_des"  id="exampleTextarea1" rows="4" placeholder="Full Descreption"></textarea>-->
+            <textarea id="exampleTextarea1" rows="10" name="description" cols="80">
+              </textarea>
+          </div>
+          </div>
+          <div style="width:38%; padding:10px;" class="bg-secondary">
+              
+            <div class="form-group">
+              <label for="exampleInputName1">Duration</label>
+              <input type="text" class="form-control" name="duration"  id="exampleInputName1" placeholder="Short Descreption">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputName1">Total Classes</label>
+              <input type="text" class="form-control" name="total_classes"  id="exampleInputName1" placeholder="Short Descreption">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputName1">Seat</label>
+              <input type="text" class="form-control" name="total_seat"  id="exampleInputName1" placeholder="Short Descreption">
+            </div>
+
+              <div class="form-group">
+            <label>File upload</label>
+            <div class="input-group col-xs-3">
+              <!--<input type="file" name="image"  class="form-control file-upload-info" placeholder="Upload Image">-->
+              <!--<span class="input-group-append">-->
+              <!--  <button class="file-upload-browse btn btn-primary" type="button">Upload</button>-->
+              <!--</span>-->
+              <label class="picture" for="picture__input" tabIndex="0">
+              <span class="picture__image"></span>
+              </label>
+
+                <input type="file" name="image" id="picture__input">
+            </div>
+          </div>
+
+
+
+          
+          </div>
+          </div>
+          
+          
+
+          
+
+          <button type="submit" class="btn btn-primary mr-2 mt-5">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  @endsection

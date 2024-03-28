@@ -1,0 +1,455 @@
+@media only screen and (min-width: 1366px) and (max-width: 1920px) {
+ 
+}
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+  
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .menu a{
+        font-size: 15px;
+    }
+    .contact a{
+        font-size: 16px;
+    }
+    .hero-content h1{
+        font-size: 55px;
+    }
+    .hero-content p{
+        font-size: 18px;
+    }
+    .hero-images .hero-img.middle {
+        margin: 10px 35px;
+    }
+    .hero-content {
+        padding: 50px 0;
+    }
+    .heading h1{
+        font-size: 35px;
+    }
+    .company-info-left h5{
+        font-size: 18px;
+    }
+    .company-info-left p{
+        font-size: 14px;
+    }
+    .single-course h1{
+        font-size: 23px;
+    }
+    .single-course p{
+        font-size: 13px;
+        line-height: 23px;
+    }
+    .single-mentor .mentor-info h1{
+        font-size: 23px;
+    }
+    .single-mentor .mentor-info p{
+        font-size: 15px;
+    }
+    .heading p{
+        font-size: 16px;
+    }
+    .single-testimonial .testi-des p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-testimonial .testimonial-top .testi-info h1{
+        font-size: 18px;
+    }
+    .single-testimonial .testimonial-top .testi-info p{
+        font-size: 15px;
+    }
+    .single-testimonial .testimonial-top{
+        margin-bottom: 20px;
+    }
+    .single-article .article-content h1{
+        font-size: 19px;
+    }
+    .single-article .article-content p{
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    header {
+        padding: 20px 30px;
+    }
+    .responsive-menu{
+        display: none;
+    }
+    .hero-content {
+        padding: 50px 20px;
+    }
+    .hero-images .hero-img.middle {
+        width: 45%;
+        margin: 10px 22px;
+    }
+    .hero-content p{
+        font-size: 18px;
+    }
+    .hero-images .hero-img.middle {
+        margin: 10px 35px;
+    }
+    .heading h1{
+        font-size: 35px;
+    }
+    .company-info-left h5{
+        font-size: 18px;
+    }
+    .company-info-left p{
+        font-size: 14px;
+    }
+    .single-course h1{
+        font-size: 23px;
+    }
+    .single-course p{
+        font-size: 13px;
+        line-height: 23px;
+    }
+    .single-mentor .mentor-info h1{
+        font-size: 23px;
+    }
+    .single-mentor .mentor-info p{
+        font-size: 15px;
+    }
+    .heading p{
+        font-size: 16px;
+    }
+    .single-testimonial .testi-des p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-testimonial .testimonial-top .testi-info h1{
+        font-size: 18px;
+    }
+    .single-testimonial .testimonial-top .testi-info p{
+        font-size: 15px;
+    }
+    .single-testimonial .testimonial-top{
+        margin-bottom: 20px;
+    }
+    .single-article .article-content h1{
+        font-size: 19px;
+    }
+    .single-article .article-content p{
+        font-size: 15px;
+    }
+    .cta-area .cta-images {
+        position: relative;
+        margin-bottom: 300px;
+    }
+    .cta-area .cta-images img {
+        position:initial;
+    }
+    .cta-area .cta-images img:last-child {
+        right: 0px;
+        position: absolute;
+        bottom: -200px;
+    }
+  
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  
+}
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+    .responsive-menu{
+        display: none;
+    }
+    .hero-content {
+        padding: 50px 20px;
+    }
+    .hero-images .hero-img.middle {
+        width: 45%;
+        margin: 10px 22px;
+    }
+    .hero-content p{
+        font-size: 18px;
+    }
+    .hero-images .hero-img.middle {
+        margin: 10px 35px;
+    }
+    .heading h1{
+        font-size: 35px;
+    }
+    .company-info-left h5{
+        font-size: 18px;
+    }
+    .company-info-left p{
+        font-size: 14px;
+    }
+    .single-course h1{
+        font-size: 23px;
+    }
+    .single-course p{
+        font-size: 13px;
+        line-height: 23px;
+        max-width: initial;
+    }
+    .single-mentor .mentor-info h1{
+        font-size: 23px;
+    }
+    .single-mentor .mentor-info p{
+        font-size: 15px;
+    }
+    .heading p{
+        font-size: 16px;
+    }
+    .single-testimonial .testi-des p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-testimonial .testimonial-top .testi-info h1{
+        font-size: 18px;
+    }
+    .single-testimonial .testimonial-top .testi-info p{
+        font-size: 15px;
+    }
+    .single-testimonial .testimonial-top{
+        margin-bottom: 20px;
+    }
+    .single-article .article-content h1{
+        font-size: 19px;
+    }
+    .single-article .article-content p{
+        font-size: 15px;
+    }
+    .cta-area .cta-images {
+        position: relative;
+        margin-bottom: 300px;
+    }
+    .cta-area .cta-images img {
+        position:initial;
+    }
+    .cta-area .cta-images img:last-child {
+        right: 0px;
+        position: absolute;
+        bottom: -200px;
+    }
+    .devider-design {
+        margin-top: -143px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 576px) {
+    header {
+        padding: 20px 30px;
+    }
+    .responsive-menu{
+        display: none;
+    }
+    .hero-content {
+        padding: 30px 20px;
+    }
+    .hero-images .hero-img.middle {
+        width: 45%;
+        margin: 10px 22px;
+    }
+    .hero-content h1{
+    font-size: 37px;
+    line-height: 57px;
+}
+    .hero-content p{
+        font-size: 16px;
+    }
+    .hero-images .hero-img.middle {
+        margin: 10px 12px;
+    }
+    .heading h1{
+        font-size: 35px;
+    }
+    .company-info-left h5{
+        font-size: 18px;
+    }
+    .company-info-left p{
+        font-size: 14px;
+    }
+    .single-course h1{
+        font-size: 23px;
+    }
+    .single-course p{
+        font-size: 13px;
+        line-height: 23px;
+        max-width: initial;
+    }
+    .single-mentor .mentor-info h1{
+        font-size: 23px;
+    }
+    .single-mentor .mentor-info p{
+        font-size: 15px;
+    }
+    .heading p{
+        font-size: 16px;
+    }
+    .single-testimonial .testi-des p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-testimonial .testimonial-top .testi-info h1{
+        font-size: 18px;
+    }
+    .single-testimonial .testimonial-top .testi-info p{
+        font-size: 15px;
+    }
+    .single-testimonial .testimonial-top{
+        margin-bottom: 20px;
+    }
+    .single-article .article-content h1{
+        font-size: 19px;
+    }
+    .single-article .article-content p{
+        font-size: 15px;
+    }
+    .cta-area .cta-images {
+        position: relative;
+        margin-bottom: 300px;
+    }
+    .cta-area .cta-images img {
+        position:initial;
+    }
+    .cta-area .cta-images img:last-child {
+        right: 0px;
+        position: absolute;
+        bottom: -200px;
+    }
+    .devider-design {
+        margin-top: -143px;
+    }
+    .footer-menu{
+        margin-top: 30px;
+    }
+    .testimonials .slick-prev {
+        top: -95px;
+    }
+    .testimonials .slick-next {
+        top: -95px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    header {
+        padding: 20px 10px;
+    }
+    .responsive-menu{
+        display: none;
+    }
+    .hero-content {
+        padding: 30px 10px;
+    }
+    .hero-images .hero-img.middle {
+        width: 45%;
+        margin: 10px 22px;
+    }
+    .hero-images .hero-img{
+        border-radious:20px;
+    }
+    .hero-content h1{
+    font-size: 32px;
+    line-height: 43px;
+}
+    .hero-content p{
+        font-size: 14px;
+    }
+    .hero-images .hero-img.middle {
+        margin: 10px 7px;
+    }
+
+    .hero-images .hero-img{
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+    }
+    .company-info{
+        padding:50px 0;
+    }
+    
+    .heading h1{
+        font-size: 35px;
+    }
+    .company-info-left h5{
+        font-size: 18px;
+    }
+    .company-info-left p{
+        font-size: 14px;
+    }
+    .single-course h1{
+        font-size: 23px;
+    }
+    .single-course p{
+        font-size: 13px;
+        line-height: 23px;
+        max-width: initial;
+    }
+    .single-mentor .mentor-info h1{
+        font-size: 23px;
+    }
+    .single-mentor .mentor-info p{
+        font-size: 15px;
+    }
+    .heading p{
+        font-size: 16px;
+    }
+    .single-testimonial .testi-des p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-testimonial .testimonial-top .testi-info h1{
+        font-size: 18px;
+    }
+    .single-testimonial .testimonial-top .testi-info p{
+        font-size: 15px;
+    }
+    .single-testimonial .testimonial-top{
+        margin-bottom: 20px;
+    }
+    .single-article .article-content h1{
+        font-size: 19px;
+    }
+    .single-article .article-content p{
+        font-size: 15px;
+    }
+    .cta-area .cta-images {
+        position: relative;
+        margin-bottom: 181px;
+    }
+    .cta-area{
+        margin: 80px 0;
+    }
+    .cta-area .cta-images img {
+        position:initial;
+        width: 220px;
+    }
+    .cta-area .cta-images img:last-child {
+        right: 0px;
+        position: absolute;
+        bottom: -123px;
+    }
+    .devider-design {
+        margin-top: -143px;
+    }
+    .footer-menu{
+        margin-top: 30px;
+    }
+    .testimonials .slick-prev {
+        top: -38px;
+    }
+    .testimonials .slick-next {
+        top: -38px;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .contact a {
+        font-size: 14px;
+    }
+    .hero-section {
+        padding: 100px 0 50px 0;
+    }
+    .single-testimonial{
+        max-height:initial;
+    }
+    .testimonials-area{
+        border-radius:20px;
+    }
+}
+/*
+@media only screen and (min-width: 375px) and (max-width: 399px){}
+@media only screen and (min-width: 320px) and (max-width: 374px){}
+*/
