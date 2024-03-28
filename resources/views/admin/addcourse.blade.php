@@ -7,20 +7,21 @@
         <form class="forms-sample" method="post" action="{{ route('added_course') }}" enctype="multipart/form-data">
           @csrf
           <div class=" d-flex justify-content-between">
-              <div style="width: 58%; padding:10px;" class="bg-secondary">
+              <div style="width: 58%; padding:10px;" class="bg-blue-950">
               <div class="form-group" >
             <label for="exampleInputName1">Title Name</label>
             <input type="text" class="form-control" name="title" id="exampleInputName1" placeholder="Blog Title">
           </div>
           
-          <div class="form-group">
-            <label for="exampleTextarea1">Description</label>
+          <div class="w-full md:w-full px-3 mb-6">
+            <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="exampleTextarea1">Description</label>
+            
             <!--<textarea class="form-control" name="full_des"  id="exampleTextarea1" rows="4" placeholder="Full Descreption"></textarea>-->
-            <textarea id="exampleTextarea1" rows="10" name="description" cols="80">
+            <textarea id="editor" rows="10" name="description" cols="80">
               </textarea>
           </div>
           </div>
-          <div style="width:38%; padding:10px;" class="bg-secondary">
+          <div style="width:38%; padding:10px;" class="bg-blue-950">
               
             <div class="form-group">
               <label for="exampleInputName1">Duration</label>
@@ -42,7 +43,7 @@
             <div class="input-group col-xs-3">
               <!--<input type="file" name="image"  class="form-control file-upload-info" placeholder="Upload Image">-->
               <!--<span class="input-group-append">-->
-              <!--  <button class="file-upload-browse btn btn-primary" type="button">Upload</button>-->
+              <!--  <button class="file-upload-browse btn btn-primary bg-blue-600" type="button">Upload</button>-->
               <!--</span>-->
               <label class="picture" for="picture__input" tabIndex="0">
               <span class="picture__image"></span>
@@ -62,7 +63,7 @@
 
           
 
-          <button type="submit" class="btn btn-primary mr-2 mt-5">Submit</button>
+          <button type="submit" class="btn btn-primary bg-blue-600 mr-2 mt-5">Submit</button>
         </form>
       </div>
     </div>

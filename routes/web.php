@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\addmediaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\admin\BlogController;
@@ -104,6 +105,10 @@ Route::middleware('auth')->group(function () {
     Route::controller(TainnerController::class)->group(function(){
         Route::get('/addtainner', 'index')->name('addtainner');
         Route::get('/alltainner', 'alltainner')->name('alltainner');
+    });
+    Route::controller(addmediaController::class)->group(function(){
+        Route::get('/addmedia', 'index')->name('addmedia');
+        Route::get('/allmedia', 'allmedia')->name('allmedia');
     });
 
     Route::controller(UserController::class)->group(function(){

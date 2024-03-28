@@ -1,23 +1,40 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="gaigDemo">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <title>Jolchobi Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-<link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet"></head>
 
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    {{-- ckeditor  --}}
+    <script src="
+https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/gulpfile.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css
+" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet"></head>
+<script src="{{asset('admin/tailwindcss.js')}}"></script>
+
+
+
+<body class="demo" ng-controller="DemoCtrl as demo">
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <div class="logo-src"></div>
+                <div class="">Jolchobi</div>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -85,21 +102,31 @@
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                            <a href="{{ route('profile.edit') }}" class="dropdown-item">
+                                                <i class="icon-head text-primary"></i>
+                                                Profile
+                                            </a>
                                             <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                                             <h6 tabindex="-1" class="dropdown-header">Header</h6>
                                             <button type="button" tabindex="0" class="dropdown-item">Actions</button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
-                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-dropdown-link :href="route('logout')"
+                                                    onclick="event.preventDefault();
+                                                                this.closest('form').submit();">
+                                                    {{ __('Log Out') }}
+                                                </x-dropdown-link>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
                                     <div class="widget-heading">
-                                        Alina Mclourd
+                                        {{ Auth::user()->name }}
                                     </div>
                                     <div class="widget-subheading">
-                                        VP People Manager
+                                        Admin
                                     </div>
                                 </div>
                                 <div class="widget-content-right header-user-info ml-3">
@@ -425,197 +452,128 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Dashboards</li>
                                 <li>
-                                    <a href="index.html" class="mm-active">
+                                    <a href="{{ route('dashboard') }}" class="mm-active">
                                         <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboard Example 1
+                                        Dashboard 
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">UI Components</li>
-                                <li
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                >
+                                <li>
                                     <a href="#">
-                                        <i class="metismenu-icon pe-7s-diamond"></i>
-                                        Elements
+                                        <i class="metismenu-icon    pe-7s-ribbon"></i>
+                                        Blogs
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                    >
+                                    <ul>
                                         <li>
                                             <a href="{{ route('addblog') }} ">
                                                 <i class="metismenu-icon"></i>
-                                                Buttons
+                                                Add Blog
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="elements-dropdowns.html">
-                                                <i class="metismenu-icon">
-                                                </i>Dropdowns
+                                            <a href="{{ route('allblog') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                All Blog
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="elements-icons.html">
-                                                <i class="metismenu-icon">
-                                                </i>Icons
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-badges-labels.html">
-                                                <i class="metismenu-icon">
-                                                </i>Badges
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-cards.html">
-                                                <i class="metismenu-icon">
-                                                </i>Cards
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-list-group.html">
-                                                <i class="metismenu-icon">
-                                                </i>List Groups
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-navigation.html">
-                                                <i class="metismenu-icon">
-                                                </i>Navigation Menus
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-utilities.html">
-                                                <i class="metismenu-icon">
-                                                </i>Utilities
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </li>
-                                <li
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                >
+                                <li>
                                     <a href="#">
-                                        <i class="metismenu-icon pe-7s-car"></i>
-                                        Components
+                                        <i class="metismenu-icon pe-7s-study"></i>
+                                        Classes
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                    >
+                                    <ul>
                                         <li>
-                                            <a href="components-tabs.html">
-                                                <i class="metismenu-icon">
-                                                </i>Tabs
+                                            <a href="{{ route('addcourse') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                Add Class
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="components-accordions.html">
-                                                <i class="metismenu-icon">
-                                                </i>Accordions
+                                            <a href="{{ route('allcourse') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                All Class
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="components-notifications.html">
-                                                <i class="metismenu-icon">
-                                                </i>Notifications
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-modals.html">
-                                                <i class="metismenu-icon">
-                                                </i>Modals
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-progress-bar.html">
-                                                <i class="metismenu-icon">
-                                                </i>Progress Bar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-tooltips-popovers.html">
-                                                <i class="metismenu-icon">
-                                                </i>Tooltips &amp; Popovers
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-carousel.html">
-                                                <i class="metismenu-icon">
-                                                </i>Carousel
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-calendar.html">
-                                                <i class="metismenu-icon">
-                                                </i>Calendar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-pagination.html">
-                                                <i class="metismenu-icon">
-                                                </i>Pagination
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-scrollable-elements.html">
-                                                <i class="metismenu-icon">
-                                                </i>Scrollable
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-maps.html">
-                                                <i class="metismenu-icon">
-                                                </i>Maps
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </li>
-                                <li  >
-                                    <a href="tables-regular.html">
-                                        <i class="metismenu-icon pe-7s-display2"></i>
-                                        Tables
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">Widgets</li>
                                 <li>
-                                    <a href="dashboard-boxes.html">
-                                        <i class="metismenu-icon pe-7s-display2"></i>
-                                        Dashboard Boxes
+                                    <a href="#">
+                                        <i class="metismenu-icon pe-7s-user"></i>
+                                        Advisor
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('addfeatured') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                Add Advisor
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('allfeatured') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                All Advisor
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon pe-7s-like2"></i>
+                                        Testimonial
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('addtainner') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                Add Testimonial
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('alltainner') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                All Testimonial
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon pe-7s-play"></i>
+                                        Media
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('addmedia') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                Add Media
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('allmedia') }} ">
+                                                <i class="metismenu-icon"></i>
+                                                All Media
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                
+                                <li class="app-sidebar__heading">Users</li>
+                                <li>
+                                    <a href="{{ route('users') }}">
+                                        <i class="metismenu-icon pe-7s-users"></i>
+                                       User
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Forms</li>
@@ -655,7 +613,9 @@
                             </ul>
                         </div>
                     </div>
-                </div>    <div class="app-main__outer">
+                </div>  
+                
+                <div class="app-main__outer">
                     @yield('content') 
                     <div class="app-wrapper-footer">
                         <div class="app-footer">
@@ -693,28 +653,23 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    </div>
+                    </div>  
+                  </div>
                 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>
     </div>
 <script type="text/javascript" src="https://demo.dashboardpack.com/architectui-html-free/assets/scripts/main.js"></script>
-
+<script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script>
 <script>
-    function DemoCtrl() {
-
-  this.foo = 'foo';
-  
-  CKEDITOR.editorConfig = function (config) {
-    config.extraPlugins = 'confighelper';
-  };
-  CKEDITOR.replace('exampleTextarea1');
-
-}
-
-angular
-  .module('gaigDemo', ['gaigUiBootstrap'])
-  .controller('DemoCtrl', DemoCtrl);
-  </script>
+    ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+</script>
 
 <script src="//cdn.gaic.com/cdn/ui-bootstrap/0.58.0/js/lib/ckeditor/ckeditor.js"></script>
 <script src="//cdn.gaic.com/cdn/ui-bootstrap/0.58.0/js/lib/jquery.min.js"></script>

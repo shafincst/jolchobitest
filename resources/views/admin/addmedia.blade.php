@@ -5,7 +5,7 @@
 <div class="col-12 ">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Add Blog</h4>
+        <h4 class="card-title">Add Media</h4>
         
         @if(Session::has('message'))
             <p class="alert alert-success">{{ Session::get('success') }}</p>

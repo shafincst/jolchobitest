@@ -30,8 +30,8 @@ class HomeController extends Controller
     public function blog_list(){
         // $blogs = blog::latest()->get();
         $blogs = blog::where('status', 'Published')->latest()->get();
-        $blogs_head = blog::take(1)->get();
-        $blogs_limit = blog::skip(1)->take(3)->get();
+        $blogs_head = blog::where('status', 'Published')->take(1)->get();
+        $blogs_limit = blog::where('status', 'Published')->skip(1)->take(3)->get();
         return view('blog-list', compact('blogs','blogs_limit','blogs_head',));
     }
     public function course_list(){

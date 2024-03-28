@@ -15,9 +15,9 @@
           </div>
           
           <div class="form-group">
-            <label for="exampleTextarea1">Description</label>
+            <label for="editor">Description</label>
             <!--<textarea class="form-control" name="full_des"  id="exampleTextarea1" rows="4" placeholder="Full Descreption"></textarea>-->
-            <textarea id="exampleTextarea1" rows="10" name="description" cols="80">{{ $editcourse->description }}
+            <textarea id="editor" rows="10" name="description" cols="80">{{ $editcourse->description }}
               </textarea>
           </div>
           </div>
@@ -63,7 +63,7 @@
 
           
 
-          <button type="submit" class="btn btn-primary mr-2 mt-5">Update</button>
+          <button type="submit" class="btn btn-primary mr-2 mt-5  bg-blue-600">Update</button>
         </form>
       </div>
     </div>

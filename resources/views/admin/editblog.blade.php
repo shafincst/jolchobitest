@@ -27,9 +27,9 @@
             <input type="text" class="form-control" name="short_des" value="{{ $editblog->short_des }}"  id="exampleInputName1" placeholder="Short Descreption">
           </div>
           <div class="form-group">
-            <label for="exampleTextarea1">Long Description</label>
+            <label for="editor">Long Description</label>
             <!--<textarea class="form-control" name="full_des"  id="exampleTextarea1" rows="4" placeholder="Full Descreption"></textarea>-->
-            <textarea id="exampleTextarea1" rows="10" name="full_des" cols="80">{{ $editblog->full_des }}
+            <textarea id="editor" rows="10" name="full_des" cols="80">{{ $editblog->full_des }}
               </textarea>
           </div>
           <div class="row" style="padding: 20px;">
@@ -98,7 +98,7 @@
           
           </div>
           </div>
-          <button type="submit" class="btn btn-primary mr-2 mt-5">Update</button>
+          <button type="submit" class="btn btn-primary mr-2 mt-5  bg-blue-600">Update</button>
         </form>
 <!--    <form class="forms-sample" method="post" action="{{ route('updateblog', ['id' => $editblog->id]) }}" enctype="multipart/form-data">-->
 <!--    @csrf-->
@@ -109,24 +109,6 @@
       </div>
     </div>
   </div>
-  <div class="theme-setting-wrapper">
-    <div id="settings-trigger"><i class="ti-settings"></i></div>
-    <div id="theme-settings" class="settings-panel">
-      <i class="settings-close ti-close"></i>
-      <p class="settings-heading">SIDEBAR SKINS</p>
-      <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
-      <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
-      <p class="settings-heading mt-2">HEADER SKINS</p>
-      <div class="color-tiles mx-0 px-4">
-        <div class="tiles success"></div>
-        <div class="tiles warning"></div>
-        <div class="tiles danger"></div>
-        <div class="tiles info"></div>
-        <div class="tiles dark"></div>
-        <div class="tiles default"></div>
-      </div>
-    </div>
-  </div>
-</div>
+
   
 @endsection
