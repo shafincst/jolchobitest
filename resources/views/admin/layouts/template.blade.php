@@ -12,6 +12,8 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
 
+
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
     {{-- ckeditor  --}}
@@ -28,7 +30,12 @@ https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/p
 <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet"></head>
 <script src="{{asset('admin/tailwindcss.js')}}"></script>
 
+<style>
+   .hover-to-show:hover > .fa-trash-can {
+  visibility: visible;
+}
 
+</style>
 
 <body class="demo" ng-controller="DemoCtrl as demo">
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
