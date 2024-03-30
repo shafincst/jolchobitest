@@ -35,7 +35,7 @@ https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/p
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <div class="">Jolchobi</div>
+                <div class=""><a style="height:50px; " class="navbar-brand brand-logo mr-5 text-dark" href=""><img style="height: 50px; width:50px" src="{{ asset('admin/assets/images/logo.png') }}" class="mr-2" alt="logo"/></a></div>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -107,10 +107,7 @@ https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/p
                                                 <i class="icon-head text-primary"></i>
                                                 Profile
                                             </a>
-                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                                            <div tabindex="-1" class="dropdown-divider"></div>
+                                            
                                             <form method="POST" action="{{ route('logout') }}">
                                                 @csrf
                                                 <x-dropdown-link :href="route('logout')"
@@ -458,7 +455,7 @@ https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/p
                                         Dashboard 
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">UI Components</li>
+                                <li class="app-sidebar__heading">Add Component</li>
                                 <li>
                                     <a href="#">
                                         <i class="metismenu-icon    pe-7s-ribbon"></i>
@@ -577,40 +574,7 @@ https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/p
                                        User
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">Forms</li>
-                                <li>
-                                    <a href="forms-controls.html">
-                                        <i class="metismenu-icon pe-7s-mouse">
-                                        </i>Forms Controls
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-layouts.html">
-                                        <i class="metismenu-icon pe-7s-eyedropper">
-                                        </i>Forms Layouts
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-validation.html">
-                                        <i class="metismenu-icon pe-7s-pendrive">
-                                        </i>Forms Validation
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">Charts</li>
-                                <li>
-                                    <a href="charts-chartjs.html">
-                                        <i class="metismenu-icon pe-7s-graph2">
-                                        </i>ChartJS
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">PRO Version</li>
-                                <li>
-                                    <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/" target="_blank">
-                                        <i class="metismenu-icon pe-7s-graph2">
-                                        </i>
-                                        Upgrade to PRO
-                                    </a>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>

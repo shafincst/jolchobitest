@@ -11,16 +11,16 @@
     <div class="flex justify-around gap-2 hover-to-show-botton" style="position: absolute; 
     top: 10px;
     right: 10px; font-size:20px;">
-    <a href="" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
+    <a href="{{ route('addmedia') }}" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
       <i class="fa-solid fa-plus p-2"></i></a>
      
-    <a href="" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
+    <a href=" {{ route('editmedia', $item->id) }}" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
       <i class="fa-solid fa-pencil p-2"></i></a>
      
     <a href="" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
       <i class="fa-solid fa-eye p-2"></i></a>
      
-    <a href="" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
+    <a href="{{ route('deletemedia', $item->id) }}" class="bg-light-500" style="background-color: rgb(155, 150, 150); border-radius:50%;">
       <i class="fa-solid fa-trash-can p-2"></i></a>
      
     </div>

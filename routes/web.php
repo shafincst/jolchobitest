@@ -101,17 +101,26 @@ Route::middleware('auth')->group(function () {
         Route::get('/addfeatured', 'index')->name('addfeatured');
         Route::post('/added_featured', 'added_featured')->name('added_featured');
         Route::get('/allfeatured', 'allfeatured')->name('allfeatured');
+        Route::get('/editfeatured/{id}', 'editfeatured')->name('editfeatured');
+        Route::post('/updatefeatured/{id}', 'updatefeatured')->name('updatefeatured'); 
+        Route::get('/deletefeaturad/{id}', 'deletefeaturad')->name('deletefeaturad');
     });
 
     Route::controller(TainnerController::class)->group(function(){
         Route::get('/addtainner', 'addtainner')->name('addtainner');
         Route::post('/added_tainner', 'added_tainner')->name('added_tainner');
         Route::get('/alltainner', 'alltainner')->name('alltainner');
+        Route::get('/edittainner/{id}', 'edittainner')->name('edittainner');
+        Route::post('/updatetainner/{id}', 'updatetainner')->name('updatetainner'); 
+        Route::get('/deletetainner/{id}', 'deletetainner')->name('deletetainner');
     });
     Route::controller(addmediaController::class)->group(function(){
         Route::get('/addmedia', 'index')->name('addmedia');
         Route::post('/added_media', 'added_media')->name('added_media');
         Route::get('/allmedia', 'allmedia')->name('allmedia');
+        Route::get('/editmedia/{id}', 'editmedia')->name('editmedia');
+        Route::post('/updatemedia/{id}', 'updatemedia')->name('updatemedia'); 
+        Route::get('/deletemedia/{id}', 'deletemedia')->name('deletemedia');
     });
 
     Route::controller(UserController::class)->group(function(){

@@ -59,9 +59,9 @@
             {{ $item->date }}
           </td>
           <td>
-            <a class="badge bg-warning" style="color: black;" href="{{ route('editcourse', $item->id) }}">Edit</a>
+            <a class="badge bg-warning" style="color: black;" href="{{ route('editfeatured', $item->id) }}">Edit</a>
             <a class="badge bg-primary" style="color: white;"  href="#">View</a>
-            <a class="badge bg-danger" style="color: white;"  href="{{ route('deletecourse', $item->id) }}">Delete</a>
+            <a class="badge bg-danger" style="color: white;"  href="{{ route('deletefeaturad', $item->id) }}">Delete</a>
           </td>
         </tr>
         @endforeach           

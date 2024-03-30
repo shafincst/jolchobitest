@@ -49,21 +49,20 @@ class FeaturedController extends Controller
         return view('admin.allfeatured', compact('detailsfeatured'));
     }
 
-    public function editcourse(Request $request, $id){
+    public function editfeatured(Request $request, $id){
         // dd($request->all());
-        $editcourse = advisor::findOrFail($id);
-        return view('admin.editcourse', compact('editcourse'));
+        $editfeatured = advisor::findOrFail($id);
+        return view('admin.editfeatured', compact('editfeatured'));
     }
     
-    public function updatecourse(Request $request, $id) {
+    public function updatefeatured(Request $request, $id) {
     
     $request->validate([
-       'title' =>  'required',
-            'description' =>  'required',
-            'duration' =>  'required',
-            'total_classes' =>  'required',
-            'total_seat' =>  'required',
-            // 'image' =>  'required',  
+        'adviser_name' =>  'required',
+        'designation' =>  'required',
+        'bio_description' =>  'required',
+        'status' =>  'required',
+        // 'image' =>  'required',  
     ]);
 
     // $image = $request->file('image');
@@ -74,26 +73,25 @@ class FeaturedController extends Controller
     $date = now();
 
     // Using DB::update() to execute the update query
-    DB::table('classes')
+    DB::table('advisors')
         ->where('id', $id)
         ->update([
-            'title' => $request->title,
-                'description' => $request->description,
-                'duration' => $request->duration,
-                'total_class' => $request->total_classes,
-                'total_seat' => $request->total_seat,
+            'adviser_name' => $request->adviser_name,
+                'designation' => $request->designation,
+                'bio_description' => $request->bio_description,
+                'status' => $request->status,
                 // 'date' => $date,
                 // 'image' => $img_url,
         ]);
 
     // Redirect to the page where you want to go after the update (e.g., all blog page)
-    return redirect()->route('allcourse')->with('success', 'Class Updated Successfully');
+    return redirect()->route('allfeatured')->with('success', 'Class Updated Successfully');
 }
 
 
-   public function deletecourse($id){
+   public function deletefeaturad($id){
             advisor::findOrFail($id)->delete();
-            return redirect()->route('allcourse');
+            return redirect()->route('allfeatured');
         }
 
             
