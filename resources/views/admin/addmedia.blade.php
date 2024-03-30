@@ -11,22 +11,22 @@
             <p class="alert alert-success">{{ Session::get('success') }}</p>
             @endif
         
-        <form class="forms-sample" method="post" action="{{ route('added_blog') }}" enctype="multipart/form-data">
+        <form class="forms-sample" method="post" action="{{ route('added_media') }}" enctype="multipart/form-data">
           @csrf
           <div class=" d-flex justify-content-between">
               <div style="width: 58%; padding:10px;" class="bg-blue-950">
               <div class="form-group" >
             <label for="exampleInputName1" class="block uppercase tracking-wide text-white text-xs font-bold mb-2">Title Name</label>
-            <input type="text" class="form-control" name="title" id="exampleInputName1" placeholder="Enter Title">
+            <input type="text" class="form-control" name="titlename" id="exampleInputName1" placeholder="Enter Title">
           </div>
           <div class="form-group">
             <label for="exampleInputName1" class="block uppercase tracking-wide text-white text-xs font-bold mb-2">Automated Slug</label>
-            <input type="text" class="form-control" name="short_des"  id="exampleInputName1" placeholder="Automated Slug">
+            <input type="text" class="form-control" name="autometedslug"  id="exampleInputName1" placeholder="Automated Slug">
           </div>
           <div class="form-group">
             <label for="editor" class="block uppercase tracking-wide text-white text-xs font-bold mb-2">Description</label>
             <!--<textarea class="form-control" name="full_des"  id="exampleTextarea1" rows="4" placeholder="Full Descreption"></textarea>-->
-            <textarea id="editor" rows="10" name="full_des" cols="80">
+            <textarea id="editor" rows="10" name="description" cols="80">
               </textarea>
           </div>
           
@@ -43,12 +43,12 @@
                   <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2 pt-2 my-2" >Quality: </label>
                 </div>
                 <div class="form-check form-check-inline border border-success bg-light" style="width:100px; padding-left:10px; margin-left:10px;">
-                <input class="form-check-input" type="radio" name="Quality" id="hdquality" value="hdquality">
+                <input class="form-check-input" type="radio" name="quality" id="hdquality" value="hdquality">
                 <label for="hdquality" style="margin-top: 0.5rem;">HD Quality</label>
               </div>
               <div class="form-check form-check-inline border border-success bg-light" style="    padding-right: 10px;
           padding-left: 10px;">
-                <input class="form-check-input" type="radio" name="Quality" id="Normal" value="Normal">
+                <input class="form-check-input" type="radio" name="quality" id="Normal" value="Normal">
                 <label  for="Normal" style="margin-top: 0.5rem;">Normal</label>
               </div>
               
@@ -113,7 +113,7 @@
               <!--</span>-->
               <label class="picture" for="picture__input" tabIndex="0">
               <span class="picture__image"></span>
-              </label>
+              </label> 
 
                 <input type="file" name="image" id="picture__input">
             </div>

@@ -30,12 +30,6 @@ https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/p
 <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet"></head>
 <script src="{{asset('admin/tailwindcss.js')}}"></script>
 
-<style>
-   .hover-to-show:hover > .fa-trash-can {
-  visibility: visible;
-}
-
-</style>
 
 <body class="demo" ng-controller="DemoCtrl as demo">
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">

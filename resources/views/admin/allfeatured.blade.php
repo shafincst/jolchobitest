@@ -7,43 +7,65 @@
         <thead>
           <tr>
             <th>
-              User
+              ID
             </th>
             <th>
-              First name
+              Adviser Name
             </th>
             <th>
-              Progress
+              Designation
             </th>
             <th>
-              Amount
+              Total Classes
             </th>
             <th>
-              Deadline
+              Seat
+            </th>
+            <th>
+              Featured Image
+            </th>
+            <th>
+              Created At
+            </th>
+            <th>
+              Action
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="py-1">
-              <img src="../../images/faces/face1.jpg" alt="image"/>
-            </td>
-            <td>
-              Herman Beck
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </td>
-            <td>
-              $ 77.99
-            </td>
-            <td>
-              May 15, 2015
-            </td>
-          </tr>           
-        </tbody>
+        @foreach ($detailsfeatured as $item)
+        <tr>
+          
+          <td>
+              {{ $item->id }}
+          </td>
+          
+          <td>
+            {{ $item->adviser_name }}
+          </td>
+          <td>
+            {{ $item->designation }}
+          </td>
+          <td>
+            {{ $item->status }}
+          </td>
+          <td>
+            {{ $item->date }}
+          </td>
+          <td class="py-1">
+            <img src="{{ asset($item->image) }}" alt="image" width="50px"/>
+          </td>
+          <td>
+            {{ $item->date }}
+          </td>
+          <td>
+            <a class="badge bg-warning" style="color: black;" href="{{ route('editcourse', $item->id) }}">Edit</a>
+            <a class="badge bg-primary" style="color: white;"  href="#">View</a>
+            <a class="badge bg-danger" style="color: white;"  href="{{ route('deletecourse', $item->id) }}">Delete</a>
+          </td>
+        </tr>
+        @endforeach           
+      </tbody>
       </table>
     </div>
   </div>

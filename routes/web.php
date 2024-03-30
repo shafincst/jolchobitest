@@ -99,15 +99,18 @@ Route::middleware('auth')->group(function () {
 
     Route::controller(FeaturedController::class)->group(function(){
         Route::get('/addfeatured', 'index')->name('addfeatured');
+        Route::post('/added_featured', 'added_featured')->name('added_featured');
         Route::get('/allfeatured', 'allfeatured')->name('allfeatured');
     });
 
     Route::controller(TainnerController::class)->group(function(){
-        Route::get('/addtainner', 'index')->name('addtainner');
+        Route::get('/addtainner', 'addtainner')->name('addtainner');
+        Route::post('/added_tainner', 'added_tainner')->name('added_tainner');
         Route::get('/alltainner', 'alltainner')->name('alltainner');
     });
     Route::controller(addmediaController::class)->group(function(){
         Route::get('/addmedia', 'index')->name('addmedia');
+        Route::post('/added_media', 'added_media')->name('added_media');
         Route::get('/allmedia', 'allmedia')->name('allmedia');
     });
 

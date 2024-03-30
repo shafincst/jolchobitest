@@ -9,23 +9,23 @@
             <p class="alert alert-success">{{ Session::get('success') }}</p>
             @endif
         
-        <form class="forms-sample" method="post" action="{{ route('added_blog') }}" enctype="multipart/form-data">
+        <form class="forms-sample" method="post" action="{{ route('added_tainner') }}" enctype="multipart/form-data">
           @csrf
           <div class=" d-flex justify-content-between">
               <div style="width: 58%; padding:10px;" class="bg-blue-950">
               <div class="form-group" >
             <label for="exampleInputName1" class="block uppercase tracking-wide text-white text-xs font-bold mb-2"> Name</label>
-            <input type="text" class="form-control" name="title" id="exampleInputName1" placeholder="Name">
+            <input type="text" class="form-control" name="name" id="exampleInputName1" placeholder="Name">
           </div>
           <div class="form-group">
             <label for="exampleInputName1" class="block uppercase tracking-wide text-white text-xs font-bold mb-2">Designation</label>
-            <input type="text" class="form-control" name="short_des"  id="exampleInputName1" placeholder="Designation">
+            <input type="text" class="form-control" name="designation"  id="exampleInputName1" placeholder="Designation">
           </div>
           <div class="w-full md:w-full px-3 mb-6">
             <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="editor">Testimonial</label>
             
             <!--<textarea class="form-control" name="full_des"  id="exampleTextarea1" rows="4" placeholder="Full Descreption"></textarea>-->
-            <textarea id="editor" rows="10" name="full_des" cols="80">
+            <textarea id="editor" rows="10" name="testimonial" cols="80">
               </textarea>
           </div>
 

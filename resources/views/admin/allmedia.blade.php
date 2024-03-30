@@ -4,8 +4,8 @@
 
   <h1 class="font-semibold text-gray-600  text-3xl uppercase	">Galary</h1>
 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-auto gap-4" >
-  
-  <div class="card w-96 hover-to-show border-slate-400 border-8" style="background-image: url('https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'); height: 300px; background-repeat: no-repeat;
+  @foreach ($detailsmedia as $item)
+  <div class="card w-96 hover-to-show border-slate-400 border-8" style="background-image: url('{{ asset($item->image) }}'); height: 300px; background-repeat: no-repeat;
  background-repeat: no-repeat;
   background-size: 100% 300px">
     <div class="flex justify-around gap-2 hover-to-show-botton" style="position: absolute; 
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-
+  @endforeach 
 
 
 </div>
